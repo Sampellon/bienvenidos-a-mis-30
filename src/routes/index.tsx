@@ -1,23 +1,60 @@
 import { createFileRoute } from "@tanstack/react-router";
+import skeleton from "@/assets/skeleton.png";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const MAPS = "https://maps.app.goo.gl/6cvXM7RtVVzLvXsj8";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "R.I.P. mis 20s · Bienvenidos mis 30s" },
+      { name: "description", content: "Despedimos los 20s y brindamos por los 30s. Sábado 28 de noviembre, 6 PM a 1 AM. Dress code: negro." },
+      { property: "og:title", content: "R.I.P. mis 20s · Bienvenidos mis 30s" },
+      { property: "og:description", content: "Sábado 28 de noviembre · 6 PM – 1 AM · Dress code: negro." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: Invitation,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Invitation() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-background flex items-center justify-center px-4 py-10">
+      <article className="invite-card relative w-full max-w-md overflow-hidden px-8 py-12 text-center">
+        <span aria-hidden className="big-30">30</span>
+
+        <div className="relative">
+          <p className="font-caps text-xs tracking-[0.4em] text-muted-foreground">R.I.P. a mis</p>
+          <h1 className="font-script text-7xl leading-none text-foreground -mt-1">veintes</h1>
+
+          <img src={skeleton} alt="Esqueleto con tiara brindando dentro de una copa de martini" className="mx-auto my-4 w-56 fade-in" />
+
+          <p className="font-caps text-xs tracking-[0.35em] text-muted-foreground">Bienvenidos</p>
+          <h2 className="font-script text-6xl text-foreground leading-tight">mis 30's</h2>
+
+          <div className="divider my-6" />
+
+          <p className="font-caps text-sm tracking-[0.3em] text-foreground">Sábado</p>
+          <p className="font-serif text-4xl text-foreground my-1">28 · 11 · 2026</p>
+          <p className="font-caps text-sm tracking-[0.3em] text-foreground">6 PM — 1 AM</p>
+
+          <a href={MAPS} target="_blank" rel="noreferrer" className="invite-btn mt-6 inline-block">
+            Ver ubicación
+          </a>
+
+          <div className="divider my-6" />
+
+          <p className="font-caps text-xs tracking-[0.35em] text-muted-foreground">Dress code</p>
+          <p className="font-script text-4xl text-foreground">Total black</p>
+          <p className="font-serif italic text-sm text-muted-foreground">de luto… pero con estilo</p>
+
+          <p className="font-serif italic text-sm text-muted-foreground mt-8 leading-relaxed">
+            Tu presencia es lo más importante;<br />
+            pero si quieres sumarle algo al brindis,<br />
+            los 30 también se celebran con detalles ✦
+          </p>
+        </div>
+      </article>
+    </main>
   );
 }
