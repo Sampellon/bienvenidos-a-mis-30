@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "Adelia";
-  src: url("/__l5e/assets-v1/2245a6bc-4bcd-4b8d-b98d-7453ef845d44/adelia.ttf") format("truetype");
+  src: url("./assets/adelia.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import birthday30 from "@/assets/birthday-30.jpg.asset.json";
+import birthday30 from "@/assets/birthday-30.jpg";
 import skeleton from "@/assets/skeleton.png";
 
 const MAPS = "https://maps.app.goo.gl/6cvXM7RtVVzLvXsj8";
@@ -23,7 +23,7 @@ function Invitation() {
     <main className="min-h-screen bg-background flex items-center justify-center px-4 py-10">
       <article className="invite-card relative w-full max-w-md overflow-hidden px-8 py-12 text-center">
         <div className="relative">
-          <img src={birthday30.url} alt="Birthday party con un 30 de fondo" className="mx-auto mb-6 w-56 fade-in" />
+          <img src={birthday30} alt="Birthday party con un 30 de fondo" className="mx-auto mb-6 w-56 fade-in" />
 
           <p className="font-caps text-xs tracking-[0.4em] text-muted-foreground">R.I.P. a mis</p>
           <h1 className="font-script text-4xl leading-normal text-foreground mt-2">Veintes</h1>
