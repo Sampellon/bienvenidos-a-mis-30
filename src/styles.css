@@ -11,6 +11,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: "Adelia";
+  src: url("/__l5e/assets-v1/2245a6bc-4bcd-4b8d-b98d-7453ef845d44/adelia.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /*
  * Design system definition.
  *
@@ -62,7 +70,7 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --font-script: "Mrs Saint Delafield", cursive;
+  --font-script: "Adelia", cursive;
   --font-serif: "Cormorant Garamond", serif;
   --font-caps: "Cinzel", serif;
   --color-sidebar: var(--sidebar);

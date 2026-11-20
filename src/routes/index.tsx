@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import skeleton from "@/assets/skeleton.png";
+import birthday30 from "@/assets/birthday-30.jpg.asset.json";
 
 const MAPS = "https://maps.app.goo.gl/6cvXM7RtVVzLvXsj8";
 
@@ -25,13 +25,13 @@ function Invitation() {
 
         <div className="relative">
           <p className="font-caps text-xs tracking-[0.4em] text-muted-foreground">R.I.P. a mis</p>
-          <h1 className="font-script text-7xl leading-none text-foreground -mt-1">veintes</h1>
+          <h1 className="font-script text-7xl leading-none text-foreground -mt-1">Veintes</h1>
 
-          <img src={skeleton} alt="Esqueleto con tiara brindando dentro de una copa de martini" className="mx-auto my-4 w-56 fade-in" />
+          <img src={birthday30.url} alt="Birthday party con un 30 de fondo" className="mx-auto my-4 w-56 fade-in" />
 
           <p className="font-caps text-xs tracking-[0.35em] text-muted-foreground">Bienvenidos</p>
           <h2 className="font-script text-6xl text-foreground leading-tight">mis 30's</h2>
-          <p className="font-caps text-sm tracking-[0.4em] text-foreground mt-2">— Sam —</p>
+          <p className="font-caps text-sm tracking-[0.4em] text-foreground mt-2">— Sam Pellón —</p>
 
           <div className="divider my-6" />
 
