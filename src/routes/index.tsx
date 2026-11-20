@@ -6,9 +6,9 @@ const MAPS = "https://maps.app.goo.gl/6cvXM7RtVVzLvXsj8";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "R.I.P. mis 20s · Bienvenidos mis 30s" },
+      { title: "R.I.P. 20s · Los 30 de Sam" },
       { name: "description", content: "Despedimos los 20s y brindamos por los 30s. Sábado 28 de noviembre, 6 PM a 1 AM. Dress code: negro." },
-      { property: "og:title", content: "R.I.P. mis 20s · Bienvenidos mis 30s" },
+      { property: "og:title", content: "R.I.P. 20s · Los 30 de Sam" },
       { property: "og:description", content: "Sábado 28 de noviembre · 6 PM – 1 AM · Dress code: negro." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -31,6 +31,7 @@ function Invitation() {
 
           <p className="font-caps text-xs tracking-[0.35em] text-muted-foreground">Bienvenidos</p>
           <h2 className="font-script text-6xl text-foreground leading-tight">mis 30's</h2>
+          <p className="font-caps text-sm tracking-[0.4em] text-foreground mt-2">— Sam —</p>
 
           <div className="divider my-6" />
 
